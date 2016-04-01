@@ -31,11 +31,11 @@ controller.hears(['google (.*)', 'lmg (.*)'], 'ambient', function(bot, message) 
 
 function urlencode(str) {
   str = escape(str);
-  str = str.replace('+', '%2B');
-  str = str.replace('%20', '+');
-  str = str.replace('*', '%2A');
-  str = str.replace('/', '%2F');
-  str = str.replace('@', '%40');
+  str = str.replace(/\+/g, '%2B');
+  str = str.replace(/%20/g, '+');
+  str = str.replace(/\*/g, '%2A');
+  str = str.replace(/\//g, '%2F');
+  str = str.replace(/\@/g, '%40');
   return str;
 };
 
