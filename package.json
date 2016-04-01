@@ -11,7 +11,6 @@
   },
   "licese": "MIT",
   "dependencies": {
-    "botkit": "latest",
-    "tinyurl": "latest"
+    "botkit": "latest"
   }
 }

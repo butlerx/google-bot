@@ -4,7 +4,6 @@ if (!process.env.token) {
 }
 
 var Botkit = require('botkit');
-var TinyURL = require('tinyurl');
 var os = require('os');
 
 var controller = Botkit.slackbot({
@@ -20,13 +19,10 @@ controller.hears(['google (.*)', 'lmg (.*)'], 'ambient', function(bot, message) 
     var args = message.match[0].split(' ');
     if (args[0] === 'google') {
       url = google(message.match[1]);
-      bot.reply(message, url)
     } else {
-      TinyURL.shorten(letme(message.match[1]), function(res) {
-        url = res;
-        bot.reply(message, url)
-      });
+      url = letme(message.match[1]);
     }
+    bot.reply(message, url)
 });
 
 function urlencode(str) {
