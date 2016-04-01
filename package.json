@@ -1,0 +1,17 @@
+{
+  "name": "google-bot",
+  "main": "app.js",
+  "author": "butlerx <butlerx@redbrick.dcu.ie>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/butlerx/googlebot"
+  },
+  "bugs": {
+    "url": "http://github.com/butlerx/googlebot/issues"
+  },
+  "licese": "MIT",
+  "dependencies": {
+    "botkit": "latest",
+    "tinyurl": "latest"
+  }
+}
